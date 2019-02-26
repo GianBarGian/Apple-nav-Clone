@@ -1,7 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
 import TopHeader from './topHeader/TopHeader';
 import BotHeader from './botHeader/BotHeader';
 import DummyData from '../../DummyData';
+
+const StyledNavHeader = styled.div`
+    text-align: center;
+`;
 
 export default class NavigationHeader extends React.Component {
     state = {
@@ -16,10 +21,10 @@ export default class NavigationHeader extends React.Component {
 
     render() {
         return (
-            <div className="header">
+            <StyledNavHeader>
                 <TopHeader data={this.state.data} />  
                 <BotHeader data={this.state.data} />
-            </div>
+            </StyledNavHeader>
         )
         
     }
